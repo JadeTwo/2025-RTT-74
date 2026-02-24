@@ -1,0 +1,19 @@
+{
+  "name": "inventory-tracker",
+  "version": "1.0.0",
+  "source": "src/main.ts",
+  "type": "module"  ,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^25.0.10",
+    "parcel": "^2.16.3",
+    "typescript": "^5.9.3"
+  }
+}

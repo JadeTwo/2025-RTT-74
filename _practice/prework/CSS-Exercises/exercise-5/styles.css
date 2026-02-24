@@ -1,0 +1,42 @@
+
+
+body {
+    color: white;
+}
+
+.container > p {
+    color: black;
+}
+
+html body {
+    background-color: black;
+}
+
+.body {
+    background-color: blue;
+}
+
+.body-slam {
+    background-color: red;
+}
+
+.body.body-slam {
+    background-color: green;
+}
+
+
+/* #body {
+    background-color: red;
+} */
+
+
+/* You should see a yellow background for p elements 
+that are descendants of the div element. */
+/* div p {
+    background-color: yellow;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+} */
+
+

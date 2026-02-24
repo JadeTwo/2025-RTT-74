@@ -1,0 +1,7 @@
+main h2 {
+    border: 3px solid black; 
+}
+
+main > h2:hover {
+    background-color: blue;
+}

@@ -1,0 +1,10 @@
+:root {
+    --White: rgb(255, 255, 255); 
+    --gray: hsl(216, 15%, 48%); 
+    --Blue: hsl(218, 44%, 22%); 
+    --light-Grey: hsl(213, 20%, 57%);
+}
+
+body {
+    background-color: var(--Blue);
+}

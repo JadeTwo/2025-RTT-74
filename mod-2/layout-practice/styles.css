@@ -1,0 +1,117 @@
+/* section {
+    background-color: grey;
+} */
+
+/* Default styles */
+body {
+  font-size: 16px;
+  margin: 0;
+}
+ 
+/* Styles for screens wider than 768px */
+/* Base style for mobile devices */
+body {
+  background-color: black;
+  color: white;
+}
+
+/* For devices with a minimum width of 768px (Medium) */
+/* @media screen and (min-width: 768px) {
+  body {
+    background-color: blue;
+    color: white;
+  }
+} */
+
+/* For devices with a minimum width of 992px (Large) */
+/* @media screen and (min-width: 992px) {
+  body {
+    background-color: tan;
+    color: black;
+  }
+} */
+
+/* div {
+    border: 1px solid blue;
+}
+
+.card {
+    background-color: grey;
+    width: 200px;
+}
+
+#card-2 {
+    border: 3px solid orange;
+}
+
+input[type="number"] {
+    border: 3px solid green;
+}
+
+#card-1 {
+    border: 3px solid purple;
+    padding-right: 5px;
+    padding-left: 6px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    margin: 15px;
+} */
+
+.card {
+    border: 1px solid white;
+}
+
+ul {
+    border: 1px solid white;
+}
+
+li {
+    border: 3px solid blue;
+}
+
+@media screen and (min-width: 500px) {
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        width: 100%;
+    }
+
+    li {
+        margin: 10px;
+    }
+
+    .card {
+
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        /* display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 3px solid red;
+        height: 500px; */
+    }
+
+    #card-1 {
+        border: 3px solid orange;
+        grid-column: 1 / 5;
+    }
+
+    #card-2 {
+        border: 3px solid blue;
+        grid-column: 1 / 4;
+    }
+    #card-3 {
+        border: 3px solid green;
+        grid-column: 1 / 3;
+    }
+    #card-4 {
+        border: 3px solid red;
+        grid-column: 1 / 2;
+    }
+}

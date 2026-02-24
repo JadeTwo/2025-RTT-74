@@ -1,0 +1,14 @@
+/* selects an element with an avatar class 
+OR a proportioned class */
+.avatar, .proportioned {
+    width: 300px;
+    aspect-ratio: 1 / 1;
+}
+
+/* selects an element with the avatar class
+AND the distorted class */
+.avatar.distorted {
+    width: 200px;
+    aspect-ratio: 1 / 2;
+    border: 3px solid red;
+}

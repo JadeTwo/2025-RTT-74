@@ -1,0 +1,19 @@
+body {
+    border: 3px solid blue;
+}
+
+ul {
+    border: 3px solid orange;
+}
+
+ul li {
+    border: 3px solid green;
+}
+
+button {
+    border: 3px solid red;
+}
+
+ol {
+    list-style: none;
+}

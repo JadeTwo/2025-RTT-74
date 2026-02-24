@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input:focus {
+            outline: none;
+            border: 3px solid blue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+   <main>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" tabindex="4">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" tabindex="3">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" tabindex="2">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" tabindex="1">
+
+            <button>Submit</button>
+        </form>
+   </main>
+ 
+</body>
+
+</html>

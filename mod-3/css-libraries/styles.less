@@ -1,0 +1,24 @@
+@import "_variables.less";
+
+body {
+    background-color: @light-theme;
+    .rounded(10px);
+}
+
+// mixin (...function)
+.rounded(@width) {
+    border: @width solid @dark-theme;
+    border-radius: 10px;
+}
+
+// nesting
+#navbar {
+    ul {
+        list-style: none;
+        li {
+            display: inline-block;
+            color: @list-item-color;
+            .rounded(1px);
+        }
+    }
+}

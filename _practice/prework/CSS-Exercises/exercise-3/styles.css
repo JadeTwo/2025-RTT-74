@@ -1,0 +1,16 @@
+.btn-1 {
+    background-color: black;
+    color: white;
+}
+
+.btn-2 {
+    background-color: yellow;
+}
+
+/* selector list (uses comma)  */
+.btn-1, .btn-2 {
+    /* both classes share these styles */
+    font-size: 28px;
+    font-family: Helvetica, 'Times New Roman', sans-serif;
+}
+
