@@ -8,35 +8,48 @@ import UserProfile from './components/UserProfile'
 import LoginButton from './components/LoginButton'
 import LogoutButton from './components/LogoutButton'
 
-// Step 1: Create the context (optional: add an argument for the default value)
-export const ThemeContext = createContext(null)
-export const UserContext = createContext(null)
+import AppProviders from './AppProviders'
+
+// // Step 1: Create the context (optional: add an argument for the default value)
+// export const ThemeContext = createContext(null)
+// export const UserContext = createContext(null)
 
 function App() {
 
-  const [theme, setTheme] = useState('light')
-  const [currentUser, setCurrentUser] = useState(null)
+  // const [theme, setTheme] = useState('light')
+  // const [currentUser, setCurrentUser] = useState(null)
 
-  const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light')
+  // const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light')
 
-  const login = (userName) => setCurrentUser({ name: userName })
+  // const login = (userName) => setCurrentUser({ name: userName })
 
-  const logout = () => setCurrentUser(null)
+  // const logout = () => setCurrentUser(null)
+
+  // return (
+  //   // Step 2: Provide the context (add a value prop)
+  //   <UserContext.Provider value={{ currentUser, login, logout }}>
+  //     <ThemeContext.Provider value={{ theme, toggleTheme }}>
+
+  //       <Navbar />
+  //       <Content />
+
+  //       <UserProfile />
+  //       <LoginButton />
+  //       <LogoutButton />
+
+  //     </ThemeContext.Provider>
+  //   </UserContext.Provider>
+  // )
 
   return (
-    // Step 2: Provide the context (add a value prop)
-    <UserContext.Provider value={{ currentUser, login, logout }}>
-      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <AppProviders>
+      <Navbar />
+      <Content />
 
-        <Navbar />
-        <Content />
-
-        <UserProfile />
-        <LoginButton />
-        <LogoutButton />
-        
-      </ThemeContext.Provider>
-    </UserContext.Provider>
+      <UserProfile />
+      <LoginButton />
+      <LogoutButton />
+    </AppProviders>
   )
 }
 

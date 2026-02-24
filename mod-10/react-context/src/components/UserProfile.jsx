@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { ThemeContext, UserContext } from "../App"
+import { ThemeContext, UserContext } from "../AppProviders"
 
 function UserProfile() {
 
