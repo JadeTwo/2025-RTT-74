@@ -1,8 +1,8 @@
-export default function SearchBar({ value, setValue }) {
+export default function SearchBar({ input, setInput }) {
     return (
         <input 
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
             type="text" 
             placeholder="Search Bar" 
         />

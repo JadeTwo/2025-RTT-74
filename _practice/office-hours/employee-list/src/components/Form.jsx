@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { EmployeeContext } from "../EmployeeProvider";
 
-function Form({ setEmployees }) {
+function Form() {
+
+    // Step 3: Consume the context
+    const { setEmployees } = useContext(EmployeeContext)
 
     const [form, setForm] = useState({ name: '', title: '' })
 
@@ -25,7 +29,7 @@ function Form({ setEmployees }) {
             const pokemon = await response.json()
 
             newEmployee.img = pokemon.sprites.other["official-artwork"].front_default
-            newEmployee.id = pokemon.id
+            newEmployee.id = newEmployee.name + newEmployee.title + pokemon.id
             newEmployee.altTxt = `picture of ${pokemon.name}`
 
         } catch(e) {

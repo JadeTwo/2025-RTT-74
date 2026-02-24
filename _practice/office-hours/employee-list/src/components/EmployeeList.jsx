@@ -1,9 +1,14 @@
+import { useContext } from 'react'
 import EmployeeListItem from './EmployeeListItem'
+import { EmployeeContext } from '../EmployeeProvider'
 
-export default function EmployeeList({ value, employees }) {
+export default function EmployeeList({ input }) {
+
+    // Step 3: Consume the context 
+    const { employees } = useContext(EmployeeContext) 
 
     // refacor our filter loop example using the filter array method
-    let filteredEmployees = employees.filter((pokemon) => pokemon.name.includes(value))
+    let filteredEmployees = employees.filter((pokemon) => pokemon.name.includes(input))
 
     const pokemonComponents = filteredEmployees.map((pokemon) => 
         <EmployeeListItem 
