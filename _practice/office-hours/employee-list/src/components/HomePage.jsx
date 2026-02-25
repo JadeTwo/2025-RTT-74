@@ -17,7 +17,7 @@ export default function HomePage() {
             <Header />
             <SearchBar input={input} setInput={setInput} />
 
-            {/* Step 2: Provide the context  */}
+            {/* Step 2: Provide the context (optional: using a custom Provider)  */}
             <EmployeeProvider>
                 <EmployeeList input={input} />
                 <Form />

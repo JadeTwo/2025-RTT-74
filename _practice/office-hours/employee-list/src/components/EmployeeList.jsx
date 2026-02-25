@@ -7,7 +7,7 @@ export default function EmployeeList({ input }) {
     // Step 3: Consume the context 
     const { employees } = useContext(EmployeeContext) 
 
-    // refacor our filter loop example using the filter array method
+    // refactor our filter loop example using the filter array method
     let filteredEmployees = employees.filter((pokemon) => pokemon.name.includes(input))
 
     const pokemonComponents = filteredEmployees.map((pokemon) => 

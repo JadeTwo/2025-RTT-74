@@ -5,6 +5,9 @@ import rayquaza from './assets/rayquaza.png'
 import kyogre from './assets/kyogre.png'
 import chienPao from './assets/chien-pao.png'
 
+// to help with creating a unique and stable id for each new employee
+export const employeeInfo = { numberOfEmployees: 6 }
+
 const pokemonEmployees = [
     {
         name: 'Pikachu',

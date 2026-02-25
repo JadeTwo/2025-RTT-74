@@ -1,7 +1,6 @@
 import { createContext, useState, useEffect } from "react"
 
-// to help with creating a unique and stable id for each new employee
-export const employeeInfo = { numberOfEmployees: 6 }
+import { employeeInfo } from "./data.js"
 
 // Step 1: Create the context
 export const EmployeeContext = createContext(null)

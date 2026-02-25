@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { EmployeeContext } from "../EmployeeProvider";
 
-import { employeeInfo } from "../EmployeeProvider";
+import { employeeInfo } from "../data.js";
 
 function Form() {
 
