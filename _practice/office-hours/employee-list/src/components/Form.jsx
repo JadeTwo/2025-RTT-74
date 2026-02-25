@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { EmployeeContext } from "../EmployeeProvider";
 
+import { employeeInfo } from "../EmployeeProvider";
+
 function Form() {
 
     // Step 3: Consume the context
@@ -19,7 +21,7 @@ function Form() {
             ...form,
             altTxt: null,
             img: null,
-            id: null
+            id: ++employeeInfo.numberOfEmployees
         }
         
         try {
@@ -29,7 +31,7 @@ function Form() {
             const pokemon = await response.json()
 
             newEmployee.img = pokemon.sprites.other["official-artwork"].front_default
-            newEmployee.id = newEmployee.name + newEmployee.title + pokemon.id
+            // newEmployee.id = newEmployee.name + newEmployee.title + pokemon.id
             newEmployee.altTxt = `picture of ${pokemon.name}`
 
         } catch(e) {
@@ -41,7 +43,7 @@ function Form() {
 
             newEmployee.name = `${form.name} (${pokemon.name})`
             newEmployee.img = pokemon.sprites.other["official-artwork"].front_default
-            newEmployee.id = pokemon.id
+            // newEmployee.id = pokemon.id
             newEmployee.altTxt = `picture of ${pokemon.name}`
            
         }
@@ -61,6 +63,7 @@ function Form() {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
+                    required
                 />
                 <label htmlFor="emp-title">Title: </label>
                 <input 
@@ -69,6 +72,7 @@ function Form() {
                     name="title"
                     value={form.title}
                     onChange={handleChange}
+                    required
                 />
                 <button>Submit</button>
             </form>

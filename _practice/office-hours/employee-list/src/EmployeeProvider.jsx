@@ -1,5 +1,8 @@
 import { createContext, useState, useEffect } from "react"
 
+// to help with creating a unique and stable id for each new employee
+export const employeeInfo = { numberOfEmployees: 6 }
+
 // Step 1: Create the context
 export const EmployeeContext = createContext(null)
 
@@ -11,7 +14,7 @@ export default function EmployeeProvider({ children }) {
         
         async function getEmployees() {
 
-            const response = await fetch('https://dummyjson.com/users?limit=6')
+            const response = await fetch('https://dummyjson.com/users?limit=' + employeeInfo.numberOfEmployees)
             const data = await response.json()
             
             const employeeData = data.users.map((emp) => ({

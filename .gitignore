@@ -1,5 +1,6 @@
 node_modules
 secret.js
-.env
-ai
 .DS_Store
+.env
+lab
+ai
