@@ -13,6 +13,7 @@ export default function EmployeeList({ input }) {
     const pokemonComponents = filteredEmployees.map((pokemon) => 
         <EmployeeListItem 
             key={pokemon.id}
+            id={pokemon.id}
             name={pokemon.name} 
             title={pokemon.title} 
             img={pokemon.img} 

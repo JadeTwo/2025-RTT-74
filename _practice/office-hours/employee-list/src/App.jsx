@@ -1,10 +1,18 @@
-import HomePage from './components/HomePage'
+import { Route, Routes } from 'react-router-dom'
+
+import HomePage from './pages/HomePage'
+import EmployeePage from './pages/EmployeePage'
 
 function App() {
 
   return (
     <>
-      <HomePage />
+
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/employee/:id" element={<EmployeePage />}  />
+    </Routes>
+      
     </>
   )
 }

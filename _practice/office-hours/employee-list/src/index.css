@@ -72,3 +72,21 @@ button {
 form button {
     width: 200px;
 }
+
+#header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#back-btn {
+    position: absolute;
+    left: 10px;
+    color: lightblue;
+    cursor: pointer;
+}
+
+#back-btn:hover {
+    color: black;
+}
+

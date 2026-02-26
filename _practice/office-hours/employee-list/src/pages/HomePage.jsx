@@ -1,7 +1,7 @@
-import Header from './Header'
-import SearchBar from './SearchBar'
-import EmployeeList from './EmployeeList'
-import Form from './Form'
+import Header from '../components/Header'
+import SearchBar from '../components/SearchBar'
+import EmployeeList from '../components/EmployeeList'
+import Form from '../components/Form'
 
 import { useState } from "react"
 
@@ -14,7 +14,7 @@ export default function HomePage() {
     return (
         
         <div>
-            <Header />
+            <Header title="Employee List" />
             <SearchBar input={input} setInput={setInput} />
 
             {/* Step 2: Provide the context (optional: using a custom Provider)  */}
