@@ -7,6 +7,7 @@ import ProductsPage from './pages/ProductsPage'
 import ProductDetailPage from './pages/ProductDetailPage'
 
 function App() {
+  
 
   return (
     <>
