@@ -5,6 +5,11 @@ const jsonClient = axios.create({
     baseURL: 'https://jsonplaceholder.typicode.com'
 })
 
+jsonClient.interceptors.request.use(request => {
+    console.log(`From Interceptor: ${request.baseURL} ${request.url}`)
+    return request
+})
+
 const app = express()
 
 app.use(express.json())
@@ -15,7 +20,7 @@ app.get('/api/users', async (req, res) => {
         const response = await jsonClient.get('/users')
 
         // axios gives us the formatted data 
-        console.log(response.data)
+        // console.log(response.data)
 
         // keep only the properties and values we need
         const transformedData = response.data.map((user) => ({
@@ -25,7 +30,7 @@ app.get('/api/users', async (req, res) => {
             email: user.email
         }))
 
-        console.log(transformedData)
+        // console.log(transformedData)
 
         res.send(transformedData)
 
